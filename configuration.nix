@@ -66,6 +66,11 @@
     variant = "";
   };
 
+  hardware.graphics.extraPackages = with pkgs; [
+    vulkan-loader
+    vulkan-validation-layers
+  ];
+
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -146,7 +151,7 @@
   programs.waybar.enable = true;
   # Install firefox.
   programs.firefox.enable = true;
-
+  programs.steam.enable = true;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -157,7 +162,6 @@
   #  wget
     git
     kitty
-    steam
     vscode
     wofi
     micro
@@ -169,6 +173,10 @@
     pavucontrol
     helvum
     thunderbird
+    vulkan-tools
+    vulkan-loader
+    vulkan-validation-layers
+    vulkan-extension-layer
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
