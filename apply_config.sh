@@ -1,2 +1,2 @@
-sudo nixos-rebuild switch
-home-manager switch --file /etc/nixos/home.nix
+sudo nixos-rebuild switch --flake /etc/nixos#nixos
+home-manager switch --flake /etc/nixos#aside6

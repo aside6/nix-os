@@ -12,13 +12,13 @@
 #      ./steam.nix
 #       ./home.nix  
 #      <home-manager/nixos>
-#       /nix/var/nix/profiles/per-user/root/channels/home-manager/nixos
+#       /nix/var/nix/profiles/per-user/aside6/channels/home-manager/nixos
   ];
 
- nix.settings.experimental-features = [ "nix-command" "flakes" ];
- #  programs.home-manager.enable = true;
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+ # programs.home-manager.enable = true;
   
- #  home-manager.users.aside6 = import ./home.nix;
+  #home-manager.users.aside6 = import ./home.nix;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
