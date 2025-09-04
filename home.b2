@@ -1,0 +1,26 @@
+{ config, pkgs, ... }:
+
+let
+  dotfilesDir = "/etc/nixos/home/aside6/dotfiles";
+  dotfiles = builtins.attrNames (builtins.readDir dotfilesDir);
+in
+{
+  home.username = "aside6";
+  home.homeDirectory = "/home/aside6";
+  home.stateVersion = "25.05";
+
+  programs.home-manager.enable = true;
+
+  # Automatically symlink all files in dotfiles directory
+#  home.file = builtins.listToAttrs (map (f: {
+#    name = "." + f;
+#    value = { source = dotfilesDir + "/" + f; };
+#  }) dotfiles);
+
+  # Example XDG configs for nested folders (Hyprland, Waybar)
+#  xdg.configFile."hypr/hyprland.conf".source = dotfilesDir + "/.config/hypr/hyprland.conf";
+#  xdg.configFile."waybar/config".source   = dotfilesDir + "/.config/waybar/config";
+#  xdg.configFile."waybar/style.css".source = dotfilesDir + "/.config/waybar/style.css";
+
+  # Add more XDG files here as needed
+}
