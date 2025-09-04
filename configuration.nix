@@ -141,6 +141,14 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "aside6";
 
+  services.logind.enable = true;  # system suspend / sleep
+  services.upower.enable = true;  # optional, for battery events
+  services.logind.settings = {
+    IdleAction = "suspend";
+    IdleActionSec = "1h";
+  };
+
+
   programs.hyprland = {
     enable = true;
     withUWSM = true; # recommended for most users
@@ -177,6 +185,8 @@
     vulkan-loader
     vulkan-validation-layers
     vulkan-extension-layer
+    wayland-idle
+    xdg-desktop-portal
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
