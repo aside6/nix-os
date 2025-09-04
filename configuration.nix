@@ -165,7 +165,7 @@
     nautilus
     ranger
     yazi
-    hyprpaper
+    wpaperd
     pavucontrol
     helvum
     thunderbird
