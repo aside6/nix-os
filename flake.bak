@@ -1,5 +1,5 @@
 {
-  description = "NixOS + Home Manager flake for aside6";
+  description = "Minimal Home Manager flake for aside6";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
@@ -9,7 +9,6 @@
   outputs = { self, nixpkgs, home-manager }: let
     system = "x86_64-linux";
   in {
-    # NixOS system
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
@@ -18,13 +17,13 @@
       ];
     };
 
-    # Home Manager configuration
     homeManagerConfigurations.aside6 = home-manager.lib.homeManagerConfiguration {
       inherit system;
       username = "aside6";
       homeDirectory = "/home/aside6";
 
-      configuration = import ./home/home.nix;
+      # Use your existing home.nix directly
+      configuration = import ./home.nix;
     };
   };
 }

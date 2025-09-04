@@ -1,0 +1,25 @@
+{ config, pkgs, ... }:
+
+let
+  # mkOutOfStore = pkg: pkgs.lib.file.mkOutOfStoreSymLink pkg;
+  # Fully persisted and backed up links
+ #  mkPersistentLink = path: pkgs.runCommand "persistent-link" {} ''
+ #   ln -s /etc/nixos/home/aside6/dotfiles/${path} $out
+ # '';
+
+in {
+  home.username = "aside6";
+  home.homeDirectory = "/home/aside6";
+
+  programs.home-manager.enable = true;
+  
+  home.stateVersion = "25.05";
+
+  # Home files with persistency
+  # home.file.".config/hypr/hyprland.conf".source = mkOutOfStore "/aside6/dotfiles/.config/hypr/hyprland.conf";
+
+  home.activation.mySimLinks = pkgs.lib.mkAfter ''
+ 	ln -sf /etc/nixos/home/aside6/dotfiles/.config/hypr /home/aside6/.config/hypr
+        ln -sf /etc/nixos/home/aside6/dotfiles/.config/waybar /home/aside6/.config/waybar	
+    ''; 
+ }

@@ -1,25 +1,26 @@
 { config, pkgs, ... }:
 
 let
-  # mkOutOfStore = pkg: pkgs.lib.file.mkOutOfStoreSymLink pkg;
-  # Fully persisted and backed up links
- #  mkPersistentLink = path: pkgs.runCommand "persistent-link" {} ''
- #   ln -s /etc/nixos/home/aside6/dotfiles/${path} $out
- # '';
-
-in {
+  dotfilesDir = "/etc/nixos/home/aside6/dotfiles";
+  dotfiles = builtins.attrNames (builtins.readDir dotfilesDir);
+in
+{
   home.username = "aside6";
   home.homeDirectory = "/home/aside6";
-
-  programs.home-manager.enable = true;
-  
   home.stateVersion = "25.05";
 
-  # Home files with persistency
-  # home.file.".config/hypr/hyprland.conf".source = mkOutOfStore "/aside6/dotfiles/.config/hypr/hyprland.conf";
+  programs.home-manager.enable = true;
 
-  home.activation.mySimLinks = pkgs.lib.mkAfter ''
- 	ln -sf /etc/nixos/home/aside6/dotfiles/.config/hypr /home/aside6/.config/hypr
-        ln -sf /etc/nixos/home/aside6/dotfiles/.config/waybar /home/aside6/.config/waybar	
-    ''; 
- }
+  # Automatically symlink all files in dotfiles directory
+  home.file = builtins.listToAttrs (map (f: {
+    name = "." + f;
+    value = { source = dotfilesDir + "/" + f; };
+  }) dotfiles);
+
+  # Example XDG configs for nested folders (Hyprland, Waybar)
+  xdg.configFile."hypr/hyprland.conf".source = dotfilesDir + "/.config/hypr/hyprland.conf";
+  xdg.configFile."waybar/config".source   = dotfilesDir + "/.config/waybar/config";
+  xdg.configFile."waybar/style.css".source = dotfilesDir + "/.config/waybar/style.css";
+
+  # Add more XDG files here as needed
+}
