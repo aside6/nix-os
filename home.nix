@@ -19,6 +19,9 @@ in {
   # home.file.".config/hypr/hyprland.conf".source = mkOutOfStore "/aside6/dotfiles/.config/hypr/hyprland.conf";
 
   home.activation.mySimLinks = pkgs.lib.mkAfter ''
+        rm -rf /home/aside6/.config/hypr
+	rm -rf /home/aside6/.config/waybar
+	rm -rf /home/aside6/.config/wpaperd
  	ln -sf /etc/nixos/home/aside6/dotfiles/.config/hypr /home/aside6/.config/hypr
         ln -sf /etc/nixos/home/aside6/dotfiles/.config/waybar /home/aside6/.config/waybar	
         ln -sf /etc/nixos/home/aside6/dotfiles/.config/wpaperd /home/aside6/.config/wpaperd
