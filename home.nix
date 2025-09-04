@@ -21,5 +21,6 @@ in {
   home.activation.mySimLinks = pkgs.lib.mkAfter ''
  	ln -sf /etc/nixos/home/aside6/dotfiles/.config/hypr /home/aside6/.config/hypr
         ln -sf /etc/nixos/home/aside6/dotfiles/.config/waybar /home/aside6/.config/waybar	
+        ln -sf /etc/nixos/home/aside6/dotfiles/.config/wpaperd /home/aside6/.config/wpaperd
     ''; 
  }

@@ -1,0 +1,13 @@
+[default]
+# Folder with your wallpapers
+path = "/usr/share/backgrounds"
+
+# How long to display each wallpaper
+duration = "10m"
+
+# Shuffle instead of sequential
+random = true
+
+# Optional: how to scale images
+# values: center, fit, fill, stretch, tile
+mode = "fill"
