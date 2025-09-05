@@ -141,12 +141,11 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "aside6";
 
-  services.logind.enable = true;  # system suspend / sleep
   services.upower.enable = true;  # optional, for battery events
-  services.logind.settings = {
-    IdleAction = "suspend";
-    IdleActionSec = "1h";
-  };
+  services.logind.extraConfig = ''
+    IdleAction=suspend
+    IdleActionSec=1h
+  '';
 
 
   programs.hyprland = {
@@ -171,7 +170,6 @@
     git
     kitty
     vscode
-    wofi
     micro
     pkgs.ntfs3g
     nautilus
@@ -185,8 +183,14 @@
     vulkan-loader
     vulkan-validation-layers
     vulkan-extension-layer
-    wayland-idle
-    xdg-desktop-portal
+    swayidle
+    lutris
+    waydroid
+    mpv
+    dunst
+    aonsoku
+    neovim
+    rofi-wayland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
