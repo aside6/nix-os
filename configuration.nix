@@ -141,11 +141,13 @@
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "aside6";
 
-  services.upower.enable = true;  # optional, for battery events
-  services.logind.extraConfig = ''
-    IdleAction=suspend
-    IdleActionSec=1h
-  '';
+#  services.upower.enable = true;  # optional, for battery events
+#  services.logind.extraConfig = ''
+#    IdleAction=suspend
+#    IdleActionSec=1h
+#  '';
+
+  services.hyperidle.enable = true;
 
 
   programs.hyprland = {
@@ -183,7 +185,6 @@
     vulkan-loader
     vulkan-validation-layers
     vulkan-extension-layer
-    swayidle
     lutris
     waydroid
     mpv
@@ -191,6 +192,7 @@
     aonsoku
     neovim
     rofi-wayland
+    nwg-look
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
