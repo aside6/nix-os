@@ -22,8 +22,10 @@ in {
         rm -rf /home/aside6/.config/hypr
 	rm -rf /home/aside6/.config/waybar
 	rm -rf /home/aside6/.config/wpaperd
+        rm -rf /home/aside6/.config/kitty
  	ln -sf /etc/nixos/home/aside6/dotfiles/.config/hypr /home/aside6/.config/hypr
         ln -sf /etc/nixos/home/aside6/dotfiles/.config/waybar /home/aside6/.config/waybar	
         ln -sf /etc/nixos/home/aside6/dotfiles/.config/wpaperd /home/aside6/.config/wpaperd
+        ln -sf /etc/nixos/home/aside6/dotfiles/.config/kitty /home/aside6/.config/kitty
     ''; 
  }
