@@ -147,7 +147,7 @@
 #    IdleActionSec=1h
 #  '';
 
-  services.hyperidle.enable = true;
+#  services.hyperidle.enable = true;
 
 
   programs.hyprland = {
