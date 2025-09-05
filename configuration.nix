@@ -194,6 +194,7 @@
     rofi-wayland
     hypridle
     discord
+    pyprland
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
