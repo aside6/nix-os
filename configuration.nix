@@ -195,6 +195,10 @@
     hypridle
     discord
     pyprland
+    p3x-onenote
+    slurp
+    grim
+    wl-clipboard
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
