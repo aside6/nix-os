@@ -475,7 +475,7 @@
   "menus.dashboard.shortcuts.left.shortcut1.command": "firefox",
   "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Firefox",
   "bar.customModules.hyprsunset.temperature": "4200k",
-  "menus.dashboard.shortcuts.left.shortcut3.icon": "󰺢",
-  "menus.dashboard.shortcuts.left.shortcut3.command": "cava",
-  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Cava"
+  "menus.dashboard.shortcuts.left.shortcut3.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut3.command": "kitty /etc/nixos",
+  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "NixOS folder"
 }
