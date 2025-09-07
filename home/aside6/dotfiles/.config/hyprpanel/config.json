@@ -466,5 +466,12 @@
   "theme.bar.buttons.modules.cpuTemp.icon": "#fab387",
   "theme.bar.buttons.modules.cpuTemp.text": "#fab387",
   "theme.bar.buttons.modules.cpuTemp.border": "#fab387",
-  "theme.osd.border.color": "#8ff0a4"
+  "theme.osd.border.color": "#8ff0a4",
+  "menus.dashboard.shortcuts.left.shortcut2.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Feishin",
+  "menus.dashboard.shortcuts.left.shortcut2.command": "feishin",
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "firefox",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Firefox",
+  "bar.customModules.hyprsunset.temperature": "4200k"
 }
