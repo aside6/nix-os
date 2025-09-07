@@ -207,7 +207,6 @@
     waydroid
     mpv
     dunst
-    aonsoku
     neovim
     rofi-wayland
     hypridle
@@ -217,6 +216,7 @@
     slurp
     grim
     wl-clipboard
+    feishin
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
