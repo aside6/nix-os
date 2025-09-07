@@ -13,6 +13,7 @@
 #       ./home.nix  
 #      <home-manager/nixos>
 #       /nix/var/nix/profiles/per-user/aside6/channels/home-manager/nixos
+#       ./hyprpanel.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -54,7 +55,7 @@
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
-
+  
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
  # services.desktopManager.plasma6.enable = true;
@@ -142,7 +143,13 @@
     fsType = "cifs";
     options = [ "guest" "uid=1000" "gid=1000" ];
   };
-  
+
+      fonts = {
+      fontDir.enable = true;
+      fontconfig.enable = true;
+    };
+
+  fonts.packages = builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.aside6 = {
@@ -175,7 +182,8 @@
   };
 
   hardware.xone.enable = true;
-  programs.waybar.enable = true;
+  #programs.hyprpanel.enable = true;
+  #programs.waybar.enable = true;
   # Install firefox.
   programs.firefox.enable = true;
   programs.steam.enable = true;
@@ -206,10 +214,11 @@
     lutris
     waydroid
     mpv
-    dunst
+#    dunst
     neovim
     rofi-wayland
     hypridle
+    hyprsunset
     discord
     pyprland
     p3x-onenote
