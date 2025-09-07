@@ -125,6 +125,24 @@
     options = [ "rw" "uid=1000" "gid=1000" "umask=000" ];
   };
 
+  fileSystems."/shares/storage" = {
+    device = "//192.168.4.133/storage";
+    fsType = "cifs";
+    options = [ "guest" "uid=1000" "gid=1000" ];
+  };
+
+  fileSystems."/shares/games" = {
+    device = "//192.168.4.133/games";
+    fsType = "cifs";
+    options = [ "guest" "uid=1000" "gid=1000" ];
+  };
+
+  fileSystems."/shares/roothome" = {
+    device = "//192.168.4.133/roothome";
+    fsType = "cifs";
+    options = [ "guest" "uid=1000" "gid=1000" ];
+  };
+  
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.aside6 = {
