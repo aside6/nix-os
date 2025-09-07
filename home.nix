@@ -24,9 +24,11 @@ in {
 	rm -rf /home/aside6/.config/wpaperd
         rm -rf /home/aside6/.config/kitty
         rm -rf /home/aside6/.config/hyprpanel
+        rm -rf /home/aside6/.config/cava
  	ln -sf /etc/nixos/home/aside6/dotfiles/.config/hypr /home/aside6/.config/hypr
         ln -sf /etc/nixos/home/aside6/dotfiles/.config/hyprpanel /home/aside6/.config/hyprpanel	
         ln -sf /etc/nixos/home/aside6/dotfiles/.config/wpaperd /home/aside6/.config/wpaperd
         ln -sf /etc/nixos/home/aside6/dotfiles/.config/kitty /home/aside6/.config/kitty
+        ln -sf /etc/nixos/home/aside6/dotfiles/.config/cava /home/aside6/.config/cava
     ''; 
  }
