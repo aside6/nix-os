@@ -477,5 +477,6 @@
   "bar.customModules.hyprsunset.temperature": "4200k",
   "menus.dashboard.shortcuts.left.shortcut3.icon": "",
   "menus.dashboard.shortcuts.left.shortcut3.command": "kitty /etc/nixos",
-  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "NixOS folder"
+  "menus.dashboard.shortcuts.left.shortcut3.tooltip": "NixOS folder",
+  "bar.customModules.cava.showActiveOnly": true
 }

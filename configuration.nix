@@ -18,7 +18,7 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
  # programs.home-manager.enable = true;
-  
+  networking.interfaces.enp42s0.wakeOnLan.enable = true;  
   #home-manager.users.aside6 = import ./home.nix;
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
