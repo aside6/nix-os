@@ -6,15 +6,9 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
-#      ./hardware-configuration.nix
-#      ./wallpaper.nix
-#      ./steam.nix
-#       ./home.nix  
-#      <home-manager/nixos>
-#       /nix/var/nix/profiles/per-user/aside6/channels/home-manager/nixos
-#       ./hyprpanel.nix
-  ];
+    [ 
+      ./sunshine.nix
+    ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
  # programs.home-manager.enable = true;
@@ -67,6 +61,7 @@
     variant = "";
   };
 
+  hardware.graphics.enable = true;
   hardware.graphics.extraPackages = with pkgs; [
     vulkan-loader
     vulkan-validation-layers
@@ -214,7 +209,7 @@
     lutris
     waydroid
     mpv
-#    dunst
+    gamescope
     neovim
     rofi-wayland
     hypridle
