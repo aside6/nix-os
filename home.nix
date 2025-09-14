@@ -16,27 +16,27 @@ in {
  
   home.stateVersion = "25.05";
 
-  xdg.configFile."sunshine/apps.json".text = builtins.toJSON
-  [
-    {
-      name = "Steam Big Picture";
-      detached = false;
-      cmd = [ "steam" "-tenfoot" ];
-      workdir = "$HOME";
-      auto_detach = true;
-      image_path = "";
-      resolutions = [];
-    }
-    {
-      name = "Steam Big Picture (1080p)";
-      detached = false;
-      cmd = [ "gamescope" "-w" "1920" "-h" "1080" "--" "steam" "-tenfoot" ];
-      workdir = "$HOME";
-      auto_detach = true;
-      image_path = "";
-      resolutions = [ "1920x1080" ];
-    }
-  ];
+#  xdg.configFile."sunshine/apps.json".text = builtins.toJSON
+#  [
+#    {
+#      name = "Steam Big Picture";
+#      detached = false;
+#      cmd = [ "steam" "-tenfoot" ];
+#      workdir = "$HOME";
+#      auto_detach = true;
+#      image_path = "";
+#      resolutions = [];
+#    }
+#    {
+#      name = "Steam Big Picture (1080p)";
+#      detached = false;
+#      cmd = [ "gamescope" "-w" "1920" "-h" "1080" "--" "steam" "-tenfoot" ];
+#      workdir = "$HOME";
+#      auto_detach = true;
+#      image_path = "";
+#      resolutions = [ "1920x1080" ];
+#    }
+#  ];
 
   
   # Home files with persistency

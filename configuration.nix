@@ -210,6 +210,7 @@
     waydroid
     mpv
     gamescope
+    gamescope-wsi
     neovim
     rofi-wayland
     hypridle
