@@ -223,6 +223,7 @@
     wl-clipboard
     feishin
     cava 
+    cura-appimage
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
